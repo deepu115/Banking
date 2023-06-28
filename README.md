@@ -5,6 +5,21 @@ This challenge helps you practice your OO design skills.
 You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
 
 ## Specification
+### User Story 1 
+As a client, 
+I want to access my Account,
+So that I can see the balance any time.
+
+### Domain Model
+
+|Object |Properties	     | Messages	  | Output    |
+|Account|balance @number |getBalance()|	@Number   |
+
+###
+* Test that Account has an initial balance of zero.
+* Test that calling the getBalance method on a Account instance returns the correct balance.
+
+
 
 ### Requirements
 
