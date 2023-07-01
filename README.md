@@ -19,7 +19,22 @@ So that I can see the balance any time.
 * Test that Account has an initial balance of zero.
 * Test that calling the getBalance method on a Account instance returns the correct balance.
 
+### User Story 2
+As a client, 
+I want to deposit amount in my Account,
+So that I can increase the balance.
 
+### Domain Model
+
+|Object |Properties	     | Messages	    | Output      |
+|Account|balance @number |deposit@number|	void()    |
+|       |                |getBalance()  |	@number   |
+
+###
+* Test that making a deposit increases the balance of the Account by the deposited amount.
+* Test that getting the current account balance after a successful deposit is equal to the sum of all previous balances.
+* Test that deposit amount don't exceed the deposit limit
+* Test that deposit value will be greater than zero.
 
 ### Requirements
 

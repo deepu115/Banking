@@ -6,5 +6,8 @@ class Account {
     getBalance() {
         return this.#balance;
     };
+    deposit(value) {
+        this.#balance += value;
+    }
 }
 export default Account;
