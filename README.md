@@ -53,6 +53,22 @@ So that I can use money.
 * Test withdrawal amount is a valid number.
 * Test withdrawal amount is greater than zero.
 
+### User Story 4
+As a client,
+I want to view my deposit and withdrawals,
+So that I can track the transaction history.
+
+### Domain Model
+
+|Object       |Properties	       | Messages	         |  Output    |
+|Account      |Transactions @Array |getTransactionList() |  @Array    |      
+|Transaction  | Date@Date          |addTransaction()     |	          |
+|             |type@string         |                     |            |            
+|             |amount@number       |                     |            |
+
+* Test that if the transaction is added to the list.
+* Test if the number of transactions are increased.
+
 
 ### Requirements
 
