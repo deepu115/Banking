@@ -9,11 +9,13 @@ class Account {
         return this.#balance;
     };
     deposit(value) {
-        if (value < this.#depositLimit) {
+        if (value < this.#depositLimit && value > 0) {
             this.#balance += value;
         } else {
-            throw new Error('Deposit amount exceeds limit');
+            throw new Error('Invalid Deposit Amount');
         }
     }
+
+
 }
 export default Account;

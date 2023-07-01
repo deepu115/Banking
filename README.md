@@ -36,6 +36,24 @@ So that I can increase the balance.
 * Test that deposit amount don't exceed the deposit limit
 * Test that deposit value will be greater than zero.
 
+### User Story 3
+As a client, 
+I want to withdraw amount from my Account,
+So that I can use money.
+
+### Domain Model
+
+|Object |Properties	     | Messages	    | Output      |
+|Account|balance @number |withdraw@number|	void()    |
+|       |                |getBalance()  |	@number   |
+
+
+* Test that making a withdrawal decreases the balance of the Account by the withdrawn amount.
+* Test if there is enough funds available for withdrawal  
+* Test withdrawal amount is a valid number
+
+
+
 ### Requirements
 
 * Results of your code should display via the JavaScript console.  (NB: You don't need to implement a command line interface that takes user input from STDIN.)
