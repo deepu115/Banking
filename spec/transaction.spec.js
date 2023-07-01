@@ -1,39 +1,46 @@
-import Account from '../src/Account.js';
 import Transaction from '../src/Transaction.js';
 
-describe('Account', () => {
-    let account;
+describe('Transactions', () => {
+    let transaction;
 
     beforeEach(() => {
-        account = new Account();
+        transaction = new Transaction();
     });
 
     afterEach(() => {
-        account = null;
+        transaction = null;
     });
 
     it('should add a transaction to the transaction list', () => {
         // Arrange
-        const transaction = new Transaction(new Date(), 'deposit', 1000);
+        const transactionFormat = {
+            date: new Date(),
+            type: 'credit',
+            amount: 1000,
+        };
 
         // Act
-        account.addTransaction(transaction);
+        transaction.addTransaction(transactionFormat);
 
         // Assert
-        const transactionList = account.getTransactionList();
-        expect(transactionList).toContain(transaction);
+        const transactionList = transaction.getTransactionList();
+        expect(transactionList).toContain(transactionFormat);
     });
 
     it('should increase the transaction list length when a transaction is added', () => {
         // Arrange
-        const initialLength = account.getTransactionList().length;
-        const transaction = new Transaction(new Date(), 'deposit', 2000);
+        const initialLength = transaction.getTransactionList().length;
+        const transactionFormat = {
+            date: new Date(),
+            type: 'debit',
+            amount: 500,
+        };
 
         // Act
-        account.addTransaction(transaction);
+        transaction.addTransaction(transactionFormat);
 
         // Assert
-        const updatedLength = account.getTransactionList().length;
+        const updatedLength = transaction.getTransactionList().length;
         expect(updatedLength).toBe(initialLength + 1);
     });
 });

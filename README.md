@@ -63,7 +63,7 @@ So that I can track the transaction history.
 |Object       |Properties	       | Messages	         |  Output    |
 |Account      |Transactions @Array |getTransactionList() |  @Array    |      
 |Transaction  | Date@Date          |addTransaction()     |	          |
-|             |type@string         |                     |            |            
+|             |type@string         |getTransactionList() |            |            
 |             |amount@number       |                     |            |
 
 * Test that if the transaction is added to the list.
