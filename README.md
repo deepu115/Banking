@@ -49,9 +49,9 @@ So that I can use money.
 
 
 * Test that making a withdrawal decreases the balance of the Account by the withdrawn amount.
-* Test if there is enough funds available for withdrawal  
-* Test withdrawal amount is a valid number
-
+* Test if there is enough funds available for withdrawal. 
+* Test withdrawal amount is a valid number.
+* Test withdrawal amount is greater than zero.
 
 
 ### Requirements

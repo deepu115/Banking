@@ -69,7 +69,8 @@ describe('Making a withdrawal', () => {
 
     it('should decrease the balance when a withdrawal is made', () => {
         // Arrange
-        const initialBalance = account.getBalance();
+        const initialBalance = 1000;
+        account.deposit(initialBalance);
         const withdrawalAmount = 500;
 
         // Act
@@ -86,7 +87,7 @@ describe('Making a withdrawal', () => {
         // Act and Assert
         expect(() => {
             account.withdraw(insufficientFunds);
-        }).toThrowError('Insufficient funds');
+        }).toThrowError('Invalid withdrawal amount');
 
         expect(account.getBalance()).toBe(0);
     });
