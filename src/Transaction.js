@@ -7,8 +7,9 @@ class Transaction {
         this.balance = balance;
     }
 
-    addTransaction(transfer) {
-        this.transactionList.push(transfer);
+    addTransaction(transaction) {
+
+        this.transactionList.push(transaction);
     }
     sortTransactionsByDate() {
         return this.transactionList.sort((a, b) => {
@@ -23,6 +24,15 @@ class Transaction {
 
     getTransactionList() {
         return this.sortTransactionsByDate();
+    }
+    getDate() {
+        return this.date;
+    }
+    getType() {
+        return this.type;
+    }
+    getAmount() {
+        return this.amount;
     }
 }
 
