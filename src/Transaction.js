@@ -1,9 +1,10 @@
 class Transaction {
-    constructor(date, type, amount) {
-        this.date = date;
+    constructor(date, type, amount, balance) {
+        this.date = new Date(date);
         this.type = type;
         this.amount = amount;
         this.transactionList = [];
+        this.balance = balance;
     }
 
     addTransaction(transfer) {
