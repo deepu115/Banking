@@ -62,14 +62,30 @@ So that I can track the transaction history.
 
 |Object       |Properties	       | Messages	         |  Output    |
 |Account      |Transactions @Array |                     |            |      
-|Transaction  | Date@Date          |addTransaction()     |	          |
+|Transaction  | Date@Date          |addTransaction()     |	@Array    |
 |             |type@string         |getTransactionList() |            |            
 |             |amount@number       |                     |            |
+
 
 * Test that if the transaction is added to the list.
 * Test if the number of transactions are increased.
 * Test should show the recent transactions first.
 * Test if the both transactions are in same date debits show first
+
+### User Story 5
+As a client,
+I want to print a statement with all the transactions,
+So that I can keep a copy of the transaction history.
+
+### Domain Model
+
+|Object          |Properties	       | Messages	         |  Output    |
+|Account         |Transactions @Array |getTransactionList()  |  @Array    |      
+|Transaction     | Date@Date          |getDate()             |	@date     |
+|                |type@string         |getType()             |  @String   |            
+|                |amount@number       |getAmount()           |  @number   |
+|                |balance@number      |getBalance()          |  @number   |
+|StatementPrinter|                    |printStatement(@array)|  @string   |
 
 
 ### Requirements
