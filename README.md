@@ -61,13 +61,15 @@ So that I can track the transaction history.
 ### Domain Model
 
 |Object       |Properties	       | Messages	         |  Output    |
-|Account      |Transactions @Array |getTransactionList() |  @Array    |      
+|Account      |Transactions @Array |                     |            |      
 |Transaction  | Date@Date          |addTransaction()     |	          |
 |             |type@string         |getTransactionList() |            |            
 |             |amount@number       |                     |            |
 
 * Test that if the transaction is added to the list.
 * Test if the number of transactions are increased.
+* Test should show the recent transactions first.
+* Test if the both transactions are in same date debits show first
 
 
 ### Requirements
