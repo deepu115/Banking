@@ -1,91 +1,125 @@
-# Bank
-
-This challenge helps you practice your OO design skills.
-
-You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
 
 ## Specification
 ### User Story 1 
+```
 As a client, 
 I want to access my Account,
 So that I can see the balance any time.
 
+```
+
 ### Domain Model
 
 |Object |Properties	     | Messages	  | Output    |
+|-------|--------------- |------------|-----------|
 |Account|balance @number |getBalance()|	@Number   |
 
-###
+#### Tests
+
 * Test that Account has an initial balance of zero.
 * Test that calling the getBalance method on a Account instance returns the correct balance.
 
+---
+
 ### User Story 2
+```
 As a client, 
 I want to deposit amount in my Account,
 So that I can increase the balance.
 
+```
 ### Domain Model
 
 |Object |Properties	     | Messages	    | Output      |
+|-------|----------------|--------------|-------------|
 |Account|balance @number |deposit@number|	void()    |
 |       |                |getBalance()  |	@number   |
 
-###
+#### Tests
 * Test that making a deposit increases the balance of the Account by the deposited amount.
 * Test that getting the current account balance after a successful deposit is equal to the sum of all previous balances.
 * Test that deposit amount don't exceed the deposit limit
 * Test that deposit value will be greater than zero.
 
+---
+
 ### User Story 3
+```
 As a client, 
 I want to withdraw amount from my Account,
 So that I can use money.
 
+```
+
 ### Domain Model
 
-|Object |Properties	     | Messages	    | Output      |
-|Account|balance @number |withdraw@number|	void()    |
-|       |                |getBalance()  |	@number   |
+|Object |Properties	     | Messages	     | Output      |
+|-------|----------------|-------------- |-------------|
+|Account|balance @number |withdraw@number|	void()     |
+|       |                |getBalance()   |	@number    |
 
+#### Tests
 
 * Test that making a withdrawal decreases the balance of the Account by the withdrawn amount.
 * Test if there is enough funds available for withdrawal. 
 * Test withdrawal amount is a valid number.
 * Test withdrawal amount is greater than zero.
 
+---
+
 ### User Story 4
+```
 As a client,
 I want to view my deposit and withdrawals,
 So that I can track the transaction history.
 
+```
+
 ### Domain Model
 
 |Object       |Properties	       | Messages	         |  Output    |
+|-------------|--------------------|---------------------|------------|
 |Account      |Transactions @Array |                     |            |      
 |Transaction  | Date@Date          |addTransaction()     |	@Array    |
 |             |type@string         |getTransactionList() |            |            
 |             |amount@number       |                     |            |
 
+#### Tests
 
 * Test that if the transaction is added to the list.
 * Test if the number of transactions are increased.
 * Test should show the recent transactions first.
 * Test if the both transactions are in same date debits show first
 
+---
+
 ### User Story 5
+
+```
 As a client,
 I want to print a statement with all the transactions,
 So that I can keep a copy of the transaction history.
 
+```
+
 ### Domain Model
 
-|Object          |Properties	       | Messages	         |  Output    |
-|Account         |Transactions @Array |getTransactionList()  |  @Array    |      
-|Transaction     | Date@Date          |getDate()             |	@date     |
-|                |type@string         |getType()             |  @String   |            
-|                |amount@number       |getAmount()           |  @number   |
-|                |balance@number      |getBalance()          |  @number   |
-|StatementPrinter|                    |printStatement(@array)|  @string   |
+|Object          |Properties	       | Messages	          |  Output    |
+|----------------|---------------------|--------------------- |------------|
+|Account         |Transactions @Array  |getTransactionList()  |  @Array    |      
+|Transaction     | Date@Date           |getDate()             |	@date      |
+|                |type@string          |getType()             |  @String   |            
+|                |amount@number        |getAmount()           |  @number   |
+|                |balance@number       |getBalance()          |  @number   |
+|StatementPrinter|                     |printStatement(@array)|  @string   |
+
+#### Tests
+* Test to print statement with the transactions and running balance
+
+#### Extended Criteria
+* Test to check the credit values in statement is green,debit values is in red and balance will be red if negative.
+
+---
 
 
 ### Requirements
@@ -94,6 +128,8 @@ So that I can keep a copy of the transaction history.
 * Deposits, withdrawal.
 * Account statement (date, credit or debit amount, balance) printing.
 * Data can be kept in memory (it doesn't need to be stored to a database or anything).
+
+
 
 ### Acceptance criteria
 

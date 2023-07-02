@@ -8,7 +8,7 @@ class Transaction {
     }
 
     addTransaction(transaction) {
-
+        // Add a transaction to the transaction list
         this.transactionList.push(transaction);
     }
     sortTransactionsByDate() {

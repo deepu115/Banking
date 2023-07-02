@@ -1,6 +1,6 @@
 import Statement from './Statement.js';
 import Transaction from './Transaction.js';
-// Create an instance of the Statement class
+
 const transaction = new Transaction();
 
 const transaction1 = new Transaction(new Date('2012-01-14'), 'debit', 500);
